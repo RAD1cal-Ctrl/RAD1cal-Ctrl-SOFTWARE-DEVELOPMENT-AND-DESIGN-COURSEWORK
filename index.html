@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALIDATION FORM</title>
 </head>
+<script src="script.js"></script>
 <body>
+   
     <h1>Registration Form</h1>
 
+    <!--error massage-->
+    <div id="error"></div>
+
 <!--Adding the first section to the form-->
-    <form>
+    <form id="form">
         <!--Name Section-->
-        <label for="Fname">First Name</label>
-        <input type="text" id="Fname"><br>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required><br>
 
-        <label for="Mname">Middle Name (Optional)</label>
-        <input type="text" id="Mname"><br>
+        <label for="mname">Middle Name (Optional)</label>
+        <input type="text" id="mname" name="mname" ><br>
 
-        <label for="Lname">Last Name</label>
-        <input type="text" id="Lname"><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required><br>
 
         <!--Password Section-->
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <input type="password" id="password" name="password" placeholder="Enter your password" >
         <br>
+
+        <!--Gender-->
+        <p>Choose your Gendar</p>
+        <input type="radio" value="Male">
+        <label for="Male">Male</label><br>
+        <input type="radio" value="Female">
+        <label for="Female">Female</label><br>
+        <input type="radio" value="Other">
+        <label for="Other">Other</label><br>
+        <br>
+
+        <!--DOB-->
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday"><br>
 
         <!--Submit Button-->
         <input type="submit">
+        <input type="reset">
     </form>
 
 </body>
