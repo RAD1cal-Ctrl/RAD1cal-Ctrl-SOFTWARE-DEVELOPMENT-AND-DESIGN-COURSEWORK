@@ -27,16 +27,16 @@
 
         <!--Password Section-->
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" >
+        <input type="password" id="password" name="password" placeholder="Enter your password" onblur="validatePassword()">
         <br>
 
-        <!--Gender-->
-        <p>Choose your Gendar</p>
-        <input type="radio" value="Male">
+        <!-- Gender -->
+        <p>Choose your Gender</p>
+        <input type="radio" id="Male" name="gender" value="Male">
         <label for="Male">Male</label><br>
-        <input type="radio" value="Female">
+        <input type="radio" id="Female" name="gender" value="Female">
         <label for="Female">Female</label><br>
-        <input type="radio" value="Other">
+        <input type="radio" id="Other" name="gender" value="Other">
         <label for="Other">Other</label><br>
         <br>
 

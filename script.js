@@ -1,4 +1,4 @@
-const nameSection = document.getElementById('name')
+/* const nameSection = document.getElementById('name')
 const passwordSection = document.getElementById ('password')
 const errorElement = document.getElementById('error')
 const formSection = document.getElementById ('form')
@@ -16,5 +16,12 @@ Form.addEventListener('submit', (e)=>{
         e.preventDefault()//prevents submition
         errorElement.innerText = messages.join(', ') //joins messaged with ,
     }
-})
+}) */
 
+    function validatePassword() {
+        const passwordInput = document.getElementById('password');
+    
+        if (passwordInput.value.length < 6) {
+          alert("Password must be at least 6 characters long.");
+        }
+      }
