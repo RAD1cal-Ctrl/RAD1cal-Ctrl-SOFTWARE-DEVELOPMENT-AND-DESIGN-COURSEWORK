@@ -5,32 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALIDATION FORM</title>
 </head>
-<script src="script.js"></script>
+<script defer src="./script.js"></script>
+<link rel="stylesheet" href="./style.css">
 <body>
    
-    <h1>Registration Form</h1>
-
     <!--error massage-->
-    <div id="error"></div>
+    <div class="container">
 
 <!--Adding the first section to the form-->
-    <form id="form">
-        <!--Name Section-->
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname" required><br>
+    <form id="form" action="/">
+        
+        <h1>Registration Form</h1>
+            <div class="input-control">
 
-        <label for="mname">Middle Name (Optional)</label>
-        <input type="text" id="mname" name="mname" ><br>
+                <!--Name Section-->
+                <label for="username">First Name</label>
+                <input id="username" type="text" name="username" >
+                <div class="error"></div>
+                <br>
+            </div>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lname" required><br>
+            <!---
+            <label for="mname">Middle Name (Optional)</label>
+            <input type="text" id="mname" name="mname" ><br>
 
-        <!--Password Section-->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" onblur="validatePassword()">
-        <br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" ><br>
+            -->
+            <div class="input-control">
+                <!--Email Section-->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" >
+                <div class="error"></div>
+                <br>
+            </div>
 
-        <!-- Gender -->
+            <div class="input-control">
+                <!--Password Section-->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <div class="error"></div>
+                <br>
+            </div>
+
+            <div class="input-control">
+                <!--Password Section-->
+                <label for="password">Password Again:</label>
+                <input type="password2" id="password2" name="password2" placeholder="Enter your password">
+                <div class="error"></div>
+                <br>
+            </div>
+        
+
+        <!-- Gender 
         <p>Choose your Gender</p>
         <input type="radio" id="Male" name="gender" value="Male">
         <label for="Male">Male</label><br>
@@ -39,15 +66,18 @@
         <input type="radio" id="Other" name="gender" value="Other">
         <label for="Other">Other</label><br>
         <br>
+        -->
 
-        <!--DOB-->
+        <!--DOB
         <label for="DOB">Date of Birth:</label>
-        <input type="date" id="birthday" name="birthday"><br>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+        -->
 
         <!--Submit Button-->
-        <input type="submit">
-        <input type="reset">
-    </form>
+        <button type="submit">Login</button>
 
+    </form>
+    </div>
 </body>
 </html>

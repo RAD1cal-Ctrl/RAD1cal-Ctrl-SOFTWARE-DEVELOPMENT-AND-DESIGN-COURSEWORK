@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(to right, #200045, #3c007a, #8814db); /* Adjust colors */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#form {
+    width: 300px;
+    margin: 20vh auto;
+    padding: 40px;
+    background: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+#form h1 {
+    color: black;
+    text-align: center;
+}
+
+#form button {
+    background-color: #4b0082; /* Adjust color */
+    color: white; /* Ensure text visibility */
+    font-size: 14px; /* Increase text size */
+    padding: 12px; /* Adjust padding */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.input-control input {
+    border: 1px solid #ccc; /* Subtle border */
+    font-size: 14px; /* Larger text */
+    padding: 12px; /* More padding */
+    width: 100%; /* Full width */
+    margin-bottom: 15px; /* Space between fields */
+}
+
+
+.input-control input:focus{
+    outline: 0;
+
+}
+
+.input-control.success input {
+    border-color: rgb(24, 211, 24);
+}
+
+.input-control.error input {
+    border-color: rgb(211, 17, 17);
+}
