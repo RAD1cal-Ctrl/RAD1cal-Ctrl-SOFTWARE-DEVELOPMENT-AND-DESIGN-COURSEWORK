@@ -15,67 +15,79 @@
 <!--Adding the first section to the form-->
     <form id="form" action="/">
         
-        <h1>Registration Form</h1>
-            <div class="input-control">
-
-                <!--Name Section-->
-                <label for="username">First Name</label>
-                <input id="username" type="text" name="username" >
-                <div class="error"></div>
-                <br>
-            </div>
-
-            <!---
-            <label for="mname">Middle Name (Optional)</label>
-            <input type="text" id="mname" name="mname" ><br>
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" ><br>
-            -->
-            <div class="input-control">
-                <!--Email Section-->
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" >
-                <div class="error"></div>
-                <br>
-            </div>
-
-            <div class="input-control">
-                <!--Password Section-->
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-                <div class="error"></div>
-                <br>
-            </div>
-
-            <div class="input-control">
-                <!--Password Section-->
-                <label for="password">Password Again:</label>
-                <input type="password2" id="password2" name="password2" placeholder="Enter your password">
-                <div class="error"></div>
-                <br>
+        <div id="form-container">
+            <div id="form-left">
+                <h1>Registration Form</h1>
+        
+                <!-- Name Section -->
+                <div class="input-control">
+                    <label for="fname">First Name</label>
+                    <input id="fname" type="text" name="fname" placeholder="First Name">
+                    <div class="error"></div>
+                </div>
+        
+                <div class="input-control">
+                    <label for="mname">Middle Name (Optional)</label>
+                    <input id="mname" type="text" name="mname" placeholder="Middle Name">
+                    <div class="error"></div>
+                </div>
+        
+                <div class="input-control">
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text" name="lname" placeholder="Last Name">
+                    <div class="error"></div>
+                </div>
+        
+                <!-- Gender Section -->
+                <div class="input-control" id="gender-section">
+                    <p>Gender:</p>
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="Male"> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="Female"> Female
+                    </label>
+                    <label for="other">
+                        <input type="radio" id="other" name="gender" value="Other"> Other
+                    </label>
+                    <div class="error"></div>
+                </div>
+                
+        
+                <!-- DOB Section -->
+                <div class="input-control" id="dob-section">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                    <div class="error"></div>
+                </div>
             </div>
         
-
-        <!-- Gender 
-        <p>Choose your Gender</p>
-        <input type="radio" id="Male" name="gender" value="Male">
-        <label for="Male">Male</label><br>
-        <input type="radio" id="Female" name="gender" value="Female">
-        <label for="Female">Female</label><br>
-        <input type="radio" id="Other" name="gender" value="Other">
-        <label for="Other">Other</label><br>
-        <br>
-        -->
-
-        <!--DOB
-        <label for="DOB">Date of Birth:</label>
-        <input type="date" id="birthday" name="birthday">
-        <br>
-        -->
-
-        <!--Submit Button-->
-        <button type="submit">Login</button>
+            <div id="form-right">
+                <!-- Email Section -->
+                <div class="input-control">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" placeholder="Enter your email">
+                    <div class="error"></div>
+                </div>
+        
+                <!-- Password Section -->
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Enter your password">
+                    <div class="error"></div>
+                </div>
+        
+                <div class="input-control">
+                    <label for="password2">Confirm Password</label>
+                    <input id="password2" type="password" name="password2" placeholder="Confirm your password">
+                    <div class="error"></div>
+                </div>
+        
+                <!-- Submit Button -->
+                <button type="submit">Register</button>
+            </div>
+        </div>
+        
 
     </form>
     </div>

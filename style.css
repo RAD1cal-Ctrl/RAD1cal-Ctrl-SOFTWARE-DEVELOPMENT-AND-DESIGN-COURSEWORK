@@ -1,58 +1,171 @@
+/* Global Styles */
 body {
-    background: linear-gradient(to right, #200045, #3c007a, #8814db); /* Adjust colors */
-    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #200045, #3c007a, #8814db); /* Background gradient */
+    font-family: 'Poppins', sans-serif; /* Consistent font across form */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-#form {
-    width: 300px;
-    margin: 20vh auto;
-    padding: 40px;
-    background: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
+/* Form Container: Two-Column Layout */
+#form-container {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20vh auto; /* Center the form vertically and horizontally */
+    max-width: 800px; /* Maximum width of the form */
+    padding: 20px;
 }
 
+/* Left and Right Columns */
+#form-left,
+#form-right {
+    flex: 1; /* Equal column widths */
+    padding: 20px;
+    background: whitesmoke; /* Background color for the form sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
-#form h1 {
-    color: black;
+/* Form Titles */
+#form-left h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
-#form button {
-    background-color: #4b0082; /* Adjust color */
-    color: white; /* Ensure text visibility */
-    font-size: 14px; /* Increase text size */
-    padding: 12px; /* Adjust padding */
-    cursor: pointer; /* Indicate interactivity */
-}
-
-
+/* Input Controls */
 .input-control {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-bottom: 15px; /* Space between fields */
+    width: 100%; /* Full width */
+}
 
+.input-control label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
 }
 
 .input-control input {
-    border: 1px solid #ccc; /* Subtle border */
-    font-size: 14px; /* Larger text */
-    padding: 12px; /* More padding */
-    width: 100%; /* Full width */
-    margin-bottom: 15px; /* Space between fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 12px; /* Padding inside inputs */
+    font-size: 14px;
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Prevent padding from affecting width */
 }
 
-
-.input-control input:focus{
-    outline: 0;
-
+.input-control input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #4b0082; /* Highlight on focus */
 }
 
 .input-control.success input {
-    border-color: rgb(24, 211, 24);
+    border-color: rgb(24, 211, 24); /* Green border for valid input */
 }
 
 .input-control.error input {
-    border-color: rgb(211, 17, 17);
+    border-color: rgb(211, 17, 17); /* Red border for invalid input */
+}
+
+/* Error Messages */
+.input-control .error {
+    color: rgb(211, 17, 17);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Gender Section */
+#gender-section {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Ensures content is left-aligned */
+}
+
+#gender-section legend {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+#gender-section label {
+  display: flex;
+  align-items: left;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+#gender-section label input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #5d0a84; /* Modern browsers support accent-color */
+}
+
+#gender-section label:hover {
+  color: #4c0d79;
+}
+
+#form-left #gender-section {
+    text-align: left;
+}
+
+
+
+/* Date of Birth Section */
+#dob-section {
+    margin-bottom: 20px;
+}
+
+#dob-section label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block; /* Place label above input */
+}
+
+#dob-section input[type="date"] {
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px;
+    font-size: 14px; /* Match other inputs */
+    padding: 10px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Consistent sizing */
+}
+
+/* Buttons */
+#form-right button {
+    background-color: #4b0082; /* Vibrant purple */
+    color: white; /* White text for contrast */
+    padding: 12px;
+    font-size: 16px; /* Large, readable text */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    width: 100%; /* Full width of column */
+    margin-top: 10px;
+}
+
+#form-right button:hover {
+    background-color: #3a006c; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #form-container {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 0;
+    }
+
+    #form-left,
+    #form-right {
+        margin-bottom: 20px; /* Add spacing between stacked sections */
+    }
 }
