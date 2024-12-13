@@ -9,13 +9,14 @@ const gender = document.getElementsByName('gender');
 const dob = document.getElementById('dob');
 
 
-
+// Prevent the default form submission and run input validation
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
 });
 
+// Sets an error message on the specified input element
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -25,6 +26,7 @@ const setError = (element, message) => {
     inputControl.classList.remove('success')
 }
 
+// Sets an secces message on the specified input element
 const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -34,13 +36,14 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 };
 
+// Validates the email format using a regular expression.
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
 
 
-const validateInputs = () => {
+const validateInputs = () => { // Retrieve and trim all input field values to prepare them for validation checks
     const fnameValue = fname.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
@@ -48,6 +51,8 @@ const validateInputs = () => {
     const mnameValue = mname.value.trim(); // Optional
     const lnameValue = lname.value.trim();
     const dobValue = dob.value.trim();
+
+    // Further validation logic goes here
 
     // First Name Validation
     if (fnameValue === '') {
@@ -117,7 +122,8 @@ const validateInputs = () => {
         const monthDiff = today.getMonth() - dobDate.getMonth();
         const dayDiff = today.getDate() - dobDate.getDate();
 
-        // Adjust age calculation based on month and day differences
+        // Check if the entered age is under 18 or over 100 based on month and day differences.
+        // If under 18 or over 100, display an error message. Otherwise, mark it as valid.
         const isUnder18 =
             age < 18 ||
             (age === 18 && (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)));
